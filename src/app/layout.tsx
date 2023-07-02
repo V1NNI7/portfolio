@@ -24,13 +24,31 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" id="html-scroll">
       <body
-        className={`${roboto.variable} relative bg-zinc-900 font-sans text-zinc-200`}
+        className={`${roboto.variable} relative bg-zinc-900 font-sans text-zinc-200 h-screen`}
       >
-        <Navbar />
+        <div className="sm:block hidden">
+          <Navbar />
 
-        {children}
+          {children}
 
-        <Footer />
+          <Footer />
+        </div>
+        <div className="sm:hidden block h-full">
+          <div className="w-full h-full flex items-center gap-8 flex-col justify-center">
+            <h1 className='text-center'>
+              <span className="text-6xl font-bold text-neutral-50">
+                Olá, eu sou o{' '}
+                <span className="bg-gradient-to-r from-indigo-500 to-indigo-800 bg-clip-text text-indigo-400 text-transparent">
+                  Vinicius
+                </span>
+              </span>
+            </h1>
+            <h2 className='text-2xl text-center'>
+              O site para versão mobile está em desenvolvimento, por favor
+              acesse pelo desktop!
+            </h2>
+          </div>
+        </div>
       </body>
     </html>
   )
