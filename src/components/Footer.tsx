@@ -14,18 +14,16 @@ export default function Footer() {
           </Link>{' '}
         </h4>
         <p className="text-center text-neutral-200">
-          <a
-            href=""
-            className="text-indigo-400 transition-colors hover:text-indigo-500"
-          >
+          <span className="text-indigo-400 transition-colors hover:text-indigo-500">
             My Portfolio
-          </a>{' '}
-          é um projeto de código aberto hospedado no{' '}
+          </span>{' '}
+          é um projeto de código aberto hospedado na{' '}
           <a
-            href=""
+            href="https://vercel.com/"
+            target='__blank'
             className="text-indigo-400 transition-colors hover:text-indigo-500"
           >
-            GitHub{' '}
+            Vercel{' '}
           </a>
           © 2023.
         </p>
