@@ -11,9 +11,9 @@ import myPhoto from '@/assets/images/Vinicius.jpg'
 export default function About() {
   return (
     <>
-      <section className="flex h-screen animate-fade-in-down items-center bg-transparent bg-gradient-radial-violet">
+      <section className="flex h-screen animate-fade-in-down items-center bg-transparent bg-gradient-radial-violet max-lg:h-full max-lg:py-16 max-sm:h-full">
         <div className="container mx-auto">
-          <div className="grid grid-cols-2">
+          <div className="grid grid-cols-2 max-lg:grid-cols-1 max-sm:grid-cols-1">
             <div className="flex justify-center">
               <Image
                 width={2296}
@@ -66,12 +66,12 @@ export default function About() {
       </section>
 
       {/* Seção de habilidades */}
-      <section className="flex h-screen items-center bg-transparent bg-gradient-radial-violet">
+      <section className="flex h-screen items-center bg-transparent bg-gradient-radial-violet max-sm:h-full max-sm:py-12">
         <div className="mx-auto max-w-5xl">
           <h1 className="mb-4 text-4xl font-bold">Habilidades</h1>
 
-          <div className="grid grid-cols-3 justify-center gap-4">
-            <div className="flex h-60 flex-col items-center justify-center gap-4 rounded-lg border border-zinc-500 bg-zinc-700 p-6 transition-colors hover:border-indigo-500">
+          <div className="grid grid-cols-3 justify-center gap-4 max-sm:grid-cols-1">
+            <div className="flex h-60 flex-col items-center justify-center gap-4 rounded-lg border border-zinc-500 bg-zinc-700 p-6 transition-colors hover:border-indigo-500 max-sm:h-72">
               <LuBrain className="text-6xl text-indigo-400" />
 
               <p className="text-justify">

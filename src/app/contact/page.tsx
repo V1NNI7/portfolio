@@ -38,14 +38,14 @@ export default function Contact() {
   return (
     <section className="relative flex h-screen w-full animate-fade-in-down flex-col items-center justify-center gap-4 bg-transparent bg-gradient-radial-violet">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 max-lg:grid-cols-1 max-lg:gap-10 max-sm:grid-cols-1 max-sm:gap-10">
           <div className="flex items-center justify-center">
-            <h1 className="text-6xl font-bold text-neutral-50">
+            <h1 className="text-6xl font-bold text-neutral-50 max-sm:text-center max-sm:text-4xl">
               Entre em contato!
             </h1>
           </div>
           <div className="flex items-center justify-center">
-            <div className="w-2/4 rounded-lg bg-neutral-700 p-4">
+            <div className="w-2/4 rounded-lg bg-neutral-700 p-4 max-sm:mx-4 max-sm:w-full">
               {emailStatus ? (
                 <div className="flex flex-col items-center justify-center gap-2">
                   {emailStatus.sent ? (
@@ -94,7 +94,7 @@ export default function Contact() {
                     <textarea
                       placeholder="Mensagem"
                       {...register('message')}
-                      className="h-48 w-full rounded-lg border-2 border-neutral-600 bg-transparent p-2 text-xl font-semibold text-neutral-400 outline-none transition-colors placeholder:text-neutral-500 focus:border-indigo-400/80"
+                      className="h-48 w-full resize-none rounded-lg border-2 border-neutral-600 bg-transparent p-2 text-xl font-semibold text-neutral-400 outline-none transition-colors placeholder:text-neutral-500 focus:border-indigo-400/80"
                     />
                     <button
                       type="submit"

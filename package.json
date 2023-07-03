@@ -30,7 +30,9 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@rocketseat/eslint-config": "^1.2.0",
     "@types/nodemailer": "^6.4.8",
-    "@types/react-scroll": "^1.8.7"
+    "@types/react-scroll": "^1.8.7",
+    "prettier-plugin-tailwindcss": "^0.3.0"
   }
 }

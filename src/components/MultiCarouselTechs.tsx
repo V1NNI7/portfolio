@@ -19,12 +19,54 @@ import {
   SiDocker,
   SiAmazonaws,
 } from 'react-icons/si'
+import { useCallback, useEffect, useState } from 'react'
 
 export default function MultiCarouselTechs() {
+  const [slidesPerview, setSlidesPerView] = useState(4)
+
+  const getItemsPerView = () => {
+    let query
+
+    if (window.matchMedia('(max-width: 640px)').matches) {
+      query = 'sm'
+    } else if (window.matchMedia('(max-width: 768px)').matches) {
+      query = 'md'
+    } else if (window.matchMedia('(max-width: 1024px)').matches) {
+      query = 'lg'
+    } else if (window.matchMedia('(max-width: 1280px)').matches) {
+      query = 'xl'
+    }
+
+    const slidesPerViewQuery: any = {
+      sm: 1,
+      md: 2,
+      lg: 3,
+      xl: 4,
+    }
+
+    if (!query) return 1
+
+    setSlidesPerView(slidesPerViewQuery[query])
+  }
+
+  const handleWindowResize = useCallback(() => {
+    getItemsPerView()
+  }, [])
+
+  useEffect(() => {
+    getItemsPerView()
+
+    addEventListener('resize', handleWindowResize)
+
+    return () => {
+      removeEventListener('resize', handleWindowResize)
+    }
+  }, [handleWindowResize])
+
   return (
     <Swiper
       initialSlide={0}
-      slidesPerView={4}
+      slidesPerView={slidesPerview}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,

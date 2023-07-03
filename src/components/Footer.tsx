@@ -20,8 +20,9 @@ export default function Footer() {
           é um projeto de código aberto hospedado na{' '}
           <a
             href="https://vercel.com/"
-            target='__blank'
+            target="_blank"
             className="text-indigo-400 transition-colors hover:text-indigo-500"
+            rel="noreferrer"
           >
             Vercel{' '}
           </a>

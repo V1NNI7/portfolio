@@ -14,13 +14,13 @@ export default function Home() {
       <section className="relative flex h-screen w-full animate-fade-in-down flex-col items-center justify-center gap-4 bg-transparent bg-gradient-radial-violet">
         <div className="h-screen w-full bg-[url(../assets/images/lending-hero-bg.png)]">
           <div className="flex h-full w-full flex-col items-center justify-center gap-4">
-            <h1 className="text-center text-6xl font-bold text-neutral-50">
+            <h1 className="text-center text-6xl font-bold text-neutral-50 max-sm:text-4xl">
               Olá, eu sou o{' '}
               <span className="bg-gradient-to-r from-indigo-500 to-indigo-800 bg-clip-text text-indigo-400 text-transparent">
                 Vinicius
               </span>
             </h1>
-            <h2 className="text-center text-4xl font-bold text-neutral-50">
+            <h2 className="text-center text-4xl font-bold text-neutral-50 max-sm:text-2xl">
               Sou Desenvolvedor Full Stack
             </h2>
 
@@ -52,7 +52,7 @@ export default function Home() {
         <div className="container mx-auto">
           <h1 className="py-10 text-4xl font-bold">Projetos em destaque</h1>
 
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-sm:m-2 max-sm:grid-cols-1">
             <div className="flex flex-col items-center justify-between gap-4 rounded-lg border border-zinc-500 bg-neutral-700 p-6 transition-colors hover:border-indigo-500">
               <BsKanban className="text-6xl" />
               <h2 className="text-4xl font-semibold">Kanbanify</h2>
